@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.wrap{
+    background:  linear-gradient(135deg,black,lightskyblue);
+    width: clamp(375px,100%,2000px);
+    height: 100vh;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.checklist{
+    width: clamp(50px,100%,1000px);
+    height: 70%;
+    background: white;
+    border-radius: 20px;
+    padding: 30px 70px 30px 70px;
+}
+.checklist h2{
+    font-size: calc(4vw + 1vh + 2vmin);
+    display: flex;
+    align-items: center;
+    color: black;
+}
+.checklist h2 img{
+    width: calc(3vw + 3vh + 2vmin);
+    margin: 20px 20px 20px 20px;
+    border: 3px solid #53CE24;
+    border-radius: 10px;
+    padding: 5px 5px 5px 5px;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(168, 176, 184);
+    padding:  10px 5px 10px 5px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.row input{
+    border: none;
+    width: clamp(50px,100%,800px);
+    background: transparent;
+    outline: none;
+    margin-left: 30px;
+ }
+ .row button{
+    font-size: calc(0.35vw + 0.35vh + 1.5vmin);
+    background: transparent;
+    border:none;
+    margin: 0 20px 0 20px;
+    transition-duration: 0.5s;
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+ }
+ .row button:hover{
+    color: white;
+    background: rgb(63, 63, 63);
+    cursor: pointer;
+ }
+ul li{
+    list-style: none;
+    font-size: clamp(10px,100%,30px);
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 10px;
+    margin-left: 50px;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height: clamp(10px,100%,30px);
+    width: clamp(10px,100%,30px);
+    background-image: url(image/check-square-regular-241.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 2px;
+    left: -40px;
+    top: 1px;
+}
+ul li.checked{
+    color: rgb(185, 185, 185);
+    text-decoration: line-through;
+    
+}
+ul li.checked::before{
+    background-image: url(image/check-square-solid-24.png);
+}
+ul li span{
+    position: absolute;
+    right: 0;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    transition-duration: .5s;
+}
+ul li span:hover{
+    background-color: gray;
+}
